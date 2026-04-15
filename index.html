@@ -146,10 +146,12 @@ nav.scrolled { box-shadow: var(--shadow-md); }
 #hero {
   display: grid; grid-template-columns: 55% 45%;
   min-height: calc(100vh - 110px);
+  position: relative;
+  background: url('Background2.jpg') center/cover no-repeat;
 }
 
 .hero-left {
-  background: var(--navy);
+  background: linear-gradient(to right, #06193A 45%, rgba(6,25,58,0.88) 70%, rgba(6,25,58,0.4) 88%, transparent 100%);
   padding: 88px clamp(24px, 6%, 80px) 88px clamp(24px, 7%, 100px);
   display: flex; flex-direction: column; justify-content: center;
   position: relative; overflow: hidden;
@@ -249,7 +251,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
 /* Hero right — image panel */
 .hero-right {
   position: relative; overflow: hidden;
-  background: var(--navy-mid);
+  background: transparent;
 }
 .hero-right-img {
   position: absolute; inset: 0;
@@ -790,7 +792,7 @@ footer {
 <nav id="navbar">
   <a href="#" class="nav-logo">
     <div class="nav-logo-shield" style="background:transparent;">
-      <img src="LOGO VETORIZADA - FINAL.jpg" alt="Machado Mendes" style="width:44px;height:44px;object-fit:contain;" />
+      <img src="logo escudo.png" alt="Machado Mendes" style="width:44px;height:44px;object-fit:contain;" />
     </div>
     <div class="nav-logo-text">
       <div class="nav-logo-name">Machado Mendes</div>
@@ -858,7 +860,6 @@ footer {
     </div>
   </div>
   <div class="hero-right">
-    <img src="Background2.jpg" class="hero-right-img" alt="Escritório Machado Mendes" />
     <div class="hero-right-overlay"></div>
     <div class="hero-right-card">
       <div class="hero-right-card-icon">
