@@ -73,7 +73,7 @@ nav {
   background: rgba(255,255,255,.95);
   backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(6,25,58,.08);
-  padding: 0 5%;
+  padding: 0 clamp(24px, 7%, 100px);
   display: flex; align-items: center; justify-content: space-between;
   height: 70px;
   transition: var(--transition);
@@ -150,7 +150,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
 
 .hero-left {
   background: var(--navy);
-  padding: 80px 6% 80px 5%;
+  padding: 88px clamp(24px, 6%, 80px) 88px clamp(24px, 7%, 100px);
   display: flex; flex-direction: column; justify-content: center;
   position: relative; overflow: hidden;
 }
@@ -252,13 +252,14 @@ nav.scrolled { box-shadow: var(--shadow-md); }
   background: var(--navy-mid);
 }
 .hero-right-img {
-  width: 100%; height: 100%; object-fit: cover;
-  filter: brightness(.55) saturate(.8);
+  width: 100%; height: 100%; object-fit: cover; object-position: center top;
+  filter: brightness(.35) saturate(.6);
+  opacity: .75;
 }
 .hero-right-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(6,25,58,.5) 0%, transparent 60%),
-              linear-gradient(to top, rgba(6,25,58,.7) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(6,25,58,.55) 0%, transparent 60%),
+              linear-gradient(to top, rgba(6,25,58,.85) 0%, transparent 55%);
 }
 .hero-right-card {
   position: absolute; bottom: 40px; left: 40px; right: 40px;
@@ -300,7 +301,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
 .stats-bar {
   background: var(--off-white);
   border-bottom: 1px solid rgba(6,25,58,.06);
-  padding: 0 5%;
+  padding: 0 clamp(24px, 7%, 100px);
   display: grid; grid-template-columns: repeat(3, 1fr);
 }
 .stats-item {
@@ -331,7 +332,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
 /* ═══════════════════════════════════════════
    SECTION HELPERS
 ═══════════════════════════════════════════ */
-.section { padding: 96px 5%; }
+.section { padding: 96px clamp(24px, 7%, 100px); max-width: 1440px; margin-left: auto; margin-right: auto; }
 .section-sm { padding: 64px 5%; }
 .section-dark { background: var(--navy); }
 .section-cream { background: var(--off-white); }
@@ -859,19 +860,17 @@ footer {
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-img-fallback">
-      <svg class="hero-law-icon" width="360" height="360" viewBox="0 0 200 200" fill="none">
-        <path d="M100 10 L180 40 L180 110 C180 156 144 190 100 200 C56 190 20 156 20 110 L20 40 Z" stroke="white" stroke-width="2" fill="none"/>
-        <line x1="100" y1="40" x2="100" y2="160" stroke="white" stroke-width="2"/>
-        <line x1="60" y1="50" x2="140" y2="50" stroke="white" stroke-width="2"/>
-        <path d="M50 70 Q75 100 50 130" stroke="white" stroke-width="2" fill="none"/>
-        <path d="M150 70 Q125 100 150 130" stroke="white" stroke-width="2" fill="none"/>
-        <text x="100" y="115" font-family="serif" font-size="30" fill="white" text-anchor="middle" font-weight="700">MM</text>
-      </svg>
-    </div>
+    <img src="WhatsApp-Image-2023-08-14-at-2.09.57-PM.jpeg" class="hero-right-img" alt="Escritório Machado Mendes" />
     <div class="hero-right-overlay"></div>
     <div class="hero-right-card">
-      <div class="hero-right-card-icon">⚖️</div>
+      <div class="hero-right-card-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="3" x2="12" y2="21"/>
+          <path d="M3 9l9-7 9 7"/>
+          <path d="M5 9l-2 6h6L5 9z"/>
+          <path d="M19 9l-2 6h6l-2-6z"/>
+        </svg>
+      </div>
       <div class="hero-right-card-text">
         <strong>Honestidade. Integridade. Advocacia.</strong>
         <span>Compromisso com resultados reais para cada cliente</span>
