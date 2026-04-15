@@ -387,6 +387,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
   background: var(--gold);
   border-radius: var(--radius-md); padding: 20px 24px;
   box-shadow: var(--shadow-lg);
+  display: flex; flex-direction: column; align-items: center; text-align: center;
 }
 .about-img-badge-num {
   font-family: 'Playfair Display', serif;
@@ -918,8 +919,11 @@ footer {
         <img src="WhatsApp-Image-2023-08-14-at-2.09.57-PM.jpeg" alt="Escritório Machado Mendes" />
       </div>
       <div class="about-img-badge">
-        <div class="about-img-badge-num">15+</div>
-        <div class="about-img-badge-label">Anos de<br/>Excelência</div>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:8px">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+        <div class="about-img-badge-label">OAB/DF · OAB/MG<br/>Regulamentados</div>
       </div>
       <div class="about-img-accent"></div>
     </div>
